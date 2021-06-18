@@ -72,8 +72,8 @@ D:\Documents\WAD\WAD\WAD\bin\System.Web.WebPages.Razor.xml
 D:\Documents\WAD\WAD\WAD\bin\Newtonsoft.Json.xml
 D:\Documents\WAD\WAD\WAD\bin\Antlr3.Runtime.pdb
 D:\Documents\WAD\WAD\WAD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.AssemblyReference.cache
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.CoreCompileInputs.cache
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.CopyComplete
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.dll
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.pdb
+D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csprojAssemblyReference.cache

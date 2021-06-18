@@ -2133,6 +2133,8 @@
     <Content Include="Views\Shared\Navbar.cshtml" />
     <Content Include="Views\Shared\Aside.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Brand.cshtml" />
+    <Content Include="Views\Category\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

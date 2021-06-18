@@ -85,5 +85,15 @@ namespace WAD.Controllers
                 return View();
             }
         }
+
+        public ActionResult Brand()
+        {
+            return View();
+        }
+
+        public ActionResult Product()
+        {
+            return View();
+        }
     }
 }
