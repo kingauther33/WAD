@@ -12,27 +12,27 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ClassRoom.Name)
+            @Html.DisplayNameFor(model => model.ClassRoom.ClassName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ClassRoom.Name)
+            @Html.DisplayFor(model => model.ClassRoom.ClassName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Faculty.Name)
+            @Html.DisplayNameFor(model => model.Faculty.FacultyName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Faculty.Name)
+            @Html.DisplayFor(model => model.Faculty.FacultyName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Subject.Name)
+            @Html.DisplayNameFor(model => model.Subject.SubjectName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Subject.Name)
+            @Html.DisplayFor(model => model.Subject.SubjectName)
         </dd>
 
         <dt>
@@ -57,6 +57,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusID)
         </dd>
 
     </dl>

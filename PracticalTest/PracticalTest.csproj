@@ -131,6 +131,7 @@
     <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +139,7 @@
     <Compile Include="Models\ClassRoom.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2143,21 +2145,26 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Aside.cshtml" />
-    <Content Include="Views\Faculty\Create.cshtml" />
-    <Content Include="Views\Faculty\Delete.cshtml" />
-    <Content Include="Views\Faculty\Details.cshtml" />
-    <Content Include="Views\Faculty\Edit.cshtml" />
-    <Content Include="Views\Faculty\Index.cshtml" />
-    <Content Include="Views\Subject\Create.cshtml" />
-    <Content Include="Views\Subject\Delete.cshtml" />
-    <Content Include="Views\Subject\Details.cshtml" />
-    <Content Include="Views\Subject\Edit.cshtml" />
-    <Content Include="Views\Subject\Index.cshtml" />
     <Content Include="Views\ClassRoom\Create.cshtml" />
     <Content Include="Views\ClassRoom\Delete.cshtml" />
     <Content Include="Views\ClassRoom\Details.cshtml" />
     <Content Include="Views\ClassRoom\Edit.cshtml" />
     <Content Include="Views\ClassRoom\Index.cshtml" />
+    <Content Include="Views\Faculty\Create.cshtml" />
+    <Content Include="Views\Faculty\Delete.cshtml" />
+    <Content Include="Views\Faculty\Details.cshtml" />
+    <Content Include="Views\Faculty\Edit.cshtml" />
+    <Content Include="Views\Faculty\Index.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Status\Details.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Subject\Create.cshtml" />
+    <Content Include="Views\Subject\Delete.cshtml" />
+    <Content Include="Views\Subject\Details.cshtml" />
+    <Content Include="Views\Subject\Edit.cshtml" />
+    <Content Include="Views\Subject\Index.cshtml" />
     <Content Include="Views\Exam\Create.cshtml" />
     <Content Include="Views\Exam\Delete.cshtml" />
     <Content Include="Views\Exam\Details.cshtml" />

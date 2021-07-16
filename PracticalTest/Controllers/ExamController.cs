@@ -40,9 +40,9 @@ namespace PracticalTest.Controllers
         // GET: Exam/Create
         public ActionResult Create()
         {
-            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "Name");
-            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "Name");
-            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "Name");
+            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "ClassName");
+            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "FacultyName");
+            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "SubjectName");
             return View();
         }
 
@@ -55,14 +55,15 @@ namespace PracticalTest.Controllers
         {
             if (ModelState.IsValid)
             {
+                exam.StatusID = 1;
                 db.Exams.Add(exam);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "Name", exam.ClassRoomID);
-            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "Name", exam.FacultyID);
-            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "Name", exam.SubjectID);
+            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "ClassName", exam.ClassRoomID);
+            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "FacultyName", exam.FacultyID);
+            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "SubjectName", exam.SubjectID);
             return View(exam);
         }
 
@@ -78,9 +79,10 @@ namespace PracticalTest.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "Name", exam.ClassRoomID);
-            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "Name", exam.FacultyID);
-            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "Name", exam.SubjectID);
+            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "ClassName", exam.ClassRoomID);
+            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "FacultyName", exam.FacultyID);
+            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "SubjectName", exam.SubjectID);
+            ViewBag.StatusID = new SelectList(db.Status, "Id", "StatusName", exam.StatusID);
             return View(exam);
         }
 
@@ -89,7 +91,7 @@ namespace PracticalTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,StartTime,Date,Duration,SubjectID,FacultyID,ClassRoomID")] Exam exam)
+        public ActionResult Edit([Bind(Include = "Id,StartTime,Date,Duration,SubjectID,FacultyID,ClassRoomID,StatusID")] Exam exam)
         {
             if (ModelState.IsValid)
             {
@@ -97,9 +99,9 @@ namespace PracticalTest.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "Name", exam.ClassRoomID);
-            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "Name", exam.FacultyID);
-            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "Name", exam.SubjectID);
+            ViewBag.ClassRoomID = new SelectList(db.ClassRooms, "Id", "ClassName", exam.ClassRoomID);
+            ViewBag.FacultyID = new SelectList(db.Faculties, "Id", "FacultyName", exam.FacultyID);
+            ViewBag.SubjectID = new SelectList(db.Subjects, "Id", "SubjectName", exam.SubjectID);
             return View(exam);
         }
 

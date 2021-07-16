@@ -10,25 +10,24 @@ namespace PracticalTest.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Please Enter Start Time")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
-        public DateTime StartTime { get; set; }
-        [Required(ErrorMessage = "Please Enter Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "0:dd/MM/yyyy", ApplyFormatInEditMode = true)]
-        public DateTime Date { get; set; }
-        [Required(ErrorMessage = "Please Enter Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "0:mm", ApplyFormatInEditMode = true)]
-        public string Duration { get; set; }
+        [Required(ErrorMessage = "Please Enter Start Time (hh:mm)")]
+        [RegularExpression(@"^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "Doesn't match format Type: hh:mm")]
+        public string StartTime { get; set; }
+        [Required(ErrorMessage = "Please Enter Date (dd/MM/yyyy)")]
+        [RegularExpression(@"^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$", ErrorMessage = "Doesn't match format Type: dd/MM/yyyy")]
+        public string Date { get; set; }
+        [Required(ErrorMessage = "Please Enter Date (in minutes)")]
+        [Range(0,300)]
+        public int Duration { get; set; }
 
         public int SubjectID { get; set; } // khoa ngoai
         public int FacultyID { get; set; }
         public int ClassRoomID { get; set; }
+        public int StatusID { get; set; }
 
         public virtual Subject Subject { get; set; }
         public virtual Faculty Faculty { get; set; }
         public virtual ClassRoom ClassRoom { get; set; }
+        public virtual Status Status { get; set; }
     }
 }

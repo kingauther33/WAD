@@ -11,107 +11,107 @@ using PracticalTest.Models;
 
 namespace PracticalTest.Controllers
 {
-    public class FacultyController : Controller
+    public class StatusController : Controller
     {
         private DataContext db = new DataContext();
 
-        // GET: Faculty
+        // GET: Status
         public ActionResult Index()
         {
-            return View(db.Faculties.ToList());
+            return View(db.Status.ToList());
         }
 
-        // GET: Faculty/Details/5
+        // GET: Status/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculty faculty = db.Faculties.Find(id);
-            if (faculty == null)
+            Status status = db.Status.Find(id);
+            if (status == null)
             {
                 return HttpNotFound();
             }
-            return View(faculty);
+            return View(status);
         }
 
-        // GET: Faculty/Create
+        // GET: Status/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Faculty/Create
+        // POST: Status/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FacultyName")] Faculty faculty)
+        public ActionResult Create([Bind(Include = "Id,StatusName")] Status status)
         {
             if (ModelState.IsValid)
             {
-                db.Faculties.Add(faculty);
+                db.Status.Add(status);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(faculty);
+            return View(status);
         }
 
-        // GET: Faculty/Edit/5
+        // GET: Status/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculty faculty = db.Faculties.Find(id);
-            if (faculty == null)
+            Status status = db.Status.Find(id);
+            if (status == null)
             {
                 return HttpNotFound();
             }
-            return View(faculty);
+            return View(status);
         }
 
-        // POST: Faculty/Edit/5
+        // POST: Status/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FacultyName")] Faculty faculty)
+        public ActionResult Edit([Bind(Include = "Id,StatusName")] Status status)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(faculty).State = EntityState.Modified;
+                db.Entry(status).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(faculty);
+            return View(status);
         }
 
-        // GET: Faculty/Delete/5
+        // GET: Status/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Faculty faculty = db.Faculties.Find(id);
-            if (faculty == null)
+            Status status = db.Status.Find(id);
+            if (status == null)
             {
                 return HttpNotFound();
             }
-            return View(faculty);
+            return View(status);
         }
 
-        // POST: Faculty/Delete/5
+        // POST: Status/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Faculty faculty = db.Faculties.Find(id);
-            db.Faculties.Remove(faculty);
+            Status status = db.Status.Find(id);
+            db.Status.Remove(status);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

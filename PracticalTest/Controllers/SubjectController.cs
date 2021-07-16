@@ -47,7 +47,7 @@ namespace PracticalTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Subject subject)
+        public ActionResult Create([Bind(Include = "Id,SubjectName")] Subject subject)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace PracticalTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] Subject subject)
+        public ActionResult Edit([Bind(Include = "Id,SubjectName")] Subject subject)
         {
             if (ModelState.IsValid)
             {

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PracticalTest.Models.Faculty>
+﻿@model IEnumerable<PracticalTest.Models.Status>
 
 @{
     ViewBag.Title = "Index";
@@ -13,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FacultyName)
+            @Html.DisplayNameFor(model => model.StatusName)
         </th>
         <th></th>
     </tr>
@@ -21,7 +21,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FacultyName)
+            @Html.DisplayFor(modelItem => item.StatusName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

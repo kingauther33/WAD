@@ -18,5 +18,7 @@ namespace PracticalTest.Context
         public DbSet<Faculty> Faculties { get; set; }
 
         public DbSet<Subject> Subjects { get; set; }
+
+        public System.Data.Entity.DbSet<PracticalTest.Models.Status> Status { get; set; }
     }
 }
