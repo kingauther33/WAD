@@ -1,0 +1,122 @@
+﻿@*@model WAD.Models.Category*@
+@model dynamic
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+    WAD.Models.Category category = Model.Category;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>*@
+        <dt>
+            Name
+        </dt>
+        <dd>
+            @category.Name
+        </dd>
+        <dt>
+            Image
+        </dt>
+        <dd>
+            @category.Image
+        </dd>
+        <dt>
+            Description
+        </dt>
+        <dd>
+            @category.Description
+        </dd>
+    </dl>
+</div>
+
+<table class="table">
+    <tr>
+        @*<th>
+                Category @Html.DisplayNameFor(model => model.Category.Name)
+            </th>*@
+        <th>
+            @*@Html.DisplayNameFor(model => model.Name)*@
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Image)*@
+            Image
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Price)*@
+            Price
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Description)*@
+            Description
+        </th>
+        <th></th>
+    </tr>
+
+    @*@foreach (var item in Model) {*@
+    @foreach (WAD.Models.Product item in Model.Products)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Product" , new { id = item.Id }, null) |
+                @Html.ActionLink("Details", "Details", "Category", new { id = item.Id }, null) |
+                @Html.ActionLink("Delete", "Delete", "Product", new { id = item.Id }, null)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = category.Id }) |
+    @Html.ActionLink("Back to List", "Index") |
+</p>

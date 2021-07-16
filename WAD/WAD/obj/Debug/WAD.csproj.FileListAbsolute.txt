@@ -76,4 +76,8 @@ D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.CoreCompileInputs.cache
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.CopyComplete
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.dll
 D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.pdb
-D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csprojAssemblyReference.cache
+D:\Documents\WAD\WAD\WAD\bin\EntityFramework.dll
+D:\Documents\WAD\WAD\WAD\bin\EntityFramework.SqlServer.dll
+D:\Documents\WAD\WAD\WAD\bin\EntityFramework.xml
+D:\Documents\WAD\WAD\WAD\bin\EntityFramework.SqlServer.xml
+D:\Documents\WAD\WAD\WAD\obj\Debug\WAD.csproj.AssemblyReference.cache
